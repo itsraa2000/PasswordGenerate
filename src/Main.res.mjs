@@ -8,6 +8,9 @@ import * as JsxRuntime from "react/jsx-runtime";
 import './index.css'
 ;
 
+import './App.css'
+;
+
 var domElement = document.querySelector("#root");
 
 if (!(domElement == null)) {
