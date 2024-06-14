@@ -8,6 +8,7 @@ module.exports = {
       subdark: '#31363F',
       maingreen: '#416D19',
       subgreen: '#355814',
+      grey: '#B4B4B8',
       mainlight:'#EEEEEE',
       sublight:'#dfdfdf',
     },

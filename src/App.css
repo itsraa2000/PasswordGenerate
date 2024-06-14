@@ -1,2 +1,15 @@
-@import '../src/style/Theme.css'
+@import '../src/style/Theme.css';
 
+
+/*
+1. Screen
+2. Card
+3. Responsive
+4. Theme
+*/
+
+
+/*----- 1.Screen  -----*/
+.screen-container {
+    @apply h-screen w-full mx-auto flex items-center justify-center inset-0
+}
