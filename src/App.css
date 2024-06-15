@@ -11,5 +11,5 @@
 
 /*----- 1.Screen  -----*/
 .screen-container {
-    @apply h-screen w-full mx-auto flex items-center justify-center inset-0
+    @apply relative w-full
 }

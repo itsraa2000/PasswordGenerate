@@ -6,12 +6,181 @@ function App(props) {
   return JsxRuntime.jsx("div", {
               children: JsxRuntime.jsx("div", {
                     children: JsxRuntime.jsx("div", {
-                          children: JsxRuntime.jsx("h1", {
-                                children: "Passsword Generator",
-                                className: "text-maindark text-3xl font-semibold"
+                          children: JsxRuntime.jsxs("div", {
+                                children: [
+                                  JsxRuntime.jsx("div", {
+                                        children: JsxRuntime.jsx("h1", {
+                                              children: "Passsword Generator",
+                                              className: "text-mainlight text-3xl font-thin"
+                                            }),
+                                        className: "flex justify-center p-6"
+                                      }),
+                                  JsxRuntime.jsx("div", {
+                                        children: JsxRuntime.jsxs("div", {
+                                              children: [
+                                                JsxRuntime.jsx("div", {
+                                                      children: JsxRuntime.jsx("h2", {
+                                                            children: "P4$5W0rD!@",
+                                                            className: "text-2xl text-grey"
+                                                          }),
+                                                      className: "relative p-3"
+                                                    }),
+                                                JsxRuntime.jsx("div", {
+                                                      children: JsxRuntime.jsxs("button", {
+                                                            children: [
+                                                              JsxRuntime.jsx("svg", {
+                                                                    children: JsxRuntime.jsx("path", {
+                                                                          d: "M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z",
+                                                                          stroke: "currentColor"
+                                                                        }),
+                                                                    className: "w-6 h-6 text-gray-800 text-maindark",
+                                                                    height: "24",
+                                                                    width: "24",
+                                                                    fill: "none",
+                                                                    viewBox: "0 0 24 24",
+                                                                    xmlns: "http://www.w3.org/2000/svg"
+                                                                  }),
+                                                              "COPY"
+                                                            ],
+                                                            className: " text-maindark flex items-center justify-center bg-maingreen hover:bg-subgreen font-medium text-sm px-4 py-2"
+                                                          }),
+                                                      className: "relative flex items-center justify-end p-3"
+                                                    })
+                                              ],
+                                              className: "bg-subdark flex items-center justify-between"
+                                            }),
+                                        className: "flex flex-col"
+                                      }),
+                                  JsxRuntime.jsx("div", {
+                                        children: JsxRuntime.jsxs("div", {
+                                              children: [
+                                                JsxRuntime.jsxs("div", {
+                                                      children: [
+                                                        JsxRuntime.jsxs("div", {
+                                                              children: [
+                                                                JsxRuntime.jsx("h3", {
+                                                                      children: "Character Length",
+                                                                      className: "text-mainlight text-xl font-thin"
+                                                                    }),
+                                                                JsxRuntime.jsx("h2", {
+                                                                      children: "0",
+                                                                      className: "flex items-center text-maingreen text-2xl"
+                                                                    })
+                                                              ],
+                                                              className: "flex justify-between items-center pb-3"
+                                                            }),
+                                                        JsxRuntime.jsx("div", {
+                                                              children: JsxRuntime.jsx("input", {
+                                                                    className: "w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700",
+                                                                    id: "default-range",
+                                                                    type: "range",
+                                                                    value: "100"
+                                                                  }),
+                                                              className: "flex"
+                                                            })
+                                                      ],
+                                                      className: "flex flex-col pb-8"
+                                                    }),
+                                                JsxRuntime.jsxs("div", {
+                                                      children: [
+                                                        JsxRuntime.jsxs("div", {
+                                                              children: [
+                                                                JsxRuntime.jsx("button", {
+                                                                      className: "h-6 w-6 bg-subdark border-sublight border-solid border-box border-[3px]"
+                                                                    }),
+                                                                JsxRuntime.jsx("p", {
+                                                                      children: "Include Uppercase Letters",
+                                                                      className: "text-mainlight text-xl font-thin"
+                                                                    })
+                                                              ],
+                                                              className: "flex flex-row space-x-4 items-center"
+                                                            }),
+                                                        JsxRuntime.jsxs("div", {
+                                                              children: [
+                                                                JsxRuntime.jsx("button", {
+                                                                      className: "h-6 w-6 bg-subdark border-sublight border-solid border-box border-[3px]"
+                                                                    }),
+                                                                JsxRuntime.jsx("p", {
+                                                                      children: "Include Lowercase Letters",
+                                                                      className: "text-mainlight text-xl font-thin"
+                                                                    })
+                                                              ],
+                                                              className: "flex flex-row space-x-4 items-center"
+                                                            }),
+                                                        JsxRuntime.jsxs("div", {
+                                                              children: [
+                                                                JsxRuntime.jsx("button", {
+                                                                      className: "h-6 w-6 bg-subdark border-sublight border-solid border-box border-[3px]"
+                                                                    }),
+                                                                JsxRuntime.jsx("p", {
+                                                                      children: "Include Numbers",
+                                                                      className: "text-mainlight text-xl font-thin"
+                                                                    })
+                                                              ],
+                                                              className: "flex flex-row space-x-4 items-center"
+                                                            }),
+                                                        JsxRuntime.jsxs("div", {
+                                                              children: [
+                                                                JsxRuntime.jsx("button", {
+                                                                      className: "h-6 w-6 bg-subdark border-sublight border-solid border-box border-[3px]"
+                                                                    }),
+                                                                JsxRuntime.jsx("p", {
+                                                                      children: "Include Symbols",
+                                                                      className: "text-mainlight text-xl font-thin"
+                                                                    })
+                                                              ],
+                                                              className: "flex flex-row space-x-4 items-center"
+                                                            })
+                                                      ],
+                                                      className: "flex flex-col space-y-4 pb-6"
+                                                    }),
+                                                JsxRuntime.jsx("div", {
+                                                      children: JsxRuntime.jsx("div", {
+                                                            children: JsxRuntime.jsxs("div", {
+                                                                  children: [
+                                                                    JsxRuntime.jsx("h2", {
+                                                                          children: "STRENGTH",
+                                                                          className: "p-3 text-xl text-grey"
+                                                                        }),
+                                                                    JsxRuntime.jsxs("div", {
+                                                                          children: [
+                                                                            JsxRuntime.jsx("div", {
+                                                                                  className: "h-8 w-2 bg-maindark border-sublight border-solid border-box border-2"
+                                                                                }),
+                                                                            JsxRuntime.jsx("div", {
+                                                                                  className: "h-8 w-2 bg-maindark border-sublight border-solid border-box border-2"
+                                                                                }),
+                                                                            JsxRuntime.jsx("div", {
+                                                                                  className: "h-8 w-2 bg-maindark border-sublight border-solid border-box border-2"
+                                                                                }),
+                                                                            JsxRuntime.jsx("div", {
+                                                                                  className: "h-8 w-2 bg-maindark border-sublight border-solid border-box border-2"
+                                                                                })
+                                                                          ],
+                                                                          className: "flex space-x-2 p-3"
+                                                                        })
+                                                                  ],
+                                                                  className: "flex justify-between items-center"
+                                                                }),
+                                                            className: "flex flex-col"
+                                                          }),
+                                                      className: "bg-maindark mb-6"
+                                                    }),
+                                                JsxRuntime.jsx("button", {
+                                                      children: "GENERATE",
+                                                      className: "text-maindark w-full justify-center flex items-center bg-maingreen hover:bg-subgreen py-3 text-xl font-thin"
+                                                    })
+                                              ],
+                                              className: "flex flex-col justify-between m-4"
+                                            }),
+                                        className: "mx-auto flex w-full max-w-[420px] flex-col bg-subdark m-4"
+                                      })
+                                ],
+                                className: "mx-auto flex w-full max-w-[420px] flex-col"
                               }),
-                          className: "p-6"
-                        })
+                          className: "mx-auto flex h-screen w-[1220px] max-w-full flex-col px-md py-[15svh]"
+                        }),
+                    className: "h-full w-full"
                   }),
               className: "screen-container"
             });

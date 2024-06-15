@@ -6,8 +6,8 @@ module.exports = {
     colors: {
       maindark: '#222831',
       subdark: '#31363F',
-      maingreen: '#416D19',
-      subgreen: '#355814',
+      maingreen: '#65B741',
+      subgreen: '#549637',
       grey: '#B4B4B8',
       mainlight:'#EEEEEE',
       sublight:'#dfdfdf',
