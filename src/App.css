@@ -13,3 +13,15 @@
 .screen-container {
     @apply relative w-full
 }
+
+
+
+/*----- 4.Theme  -----*/
+
+input {
+    @apply accent-maindark
+}
+
+input:checked {
+    @apply accent-maingreen
+}
