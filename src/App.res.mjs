@@ -5,31 +5,57 @@ import * as JsxRuntime from "react/jsx-runtime";
 
 function App(props) {
   var match = React.useState(function () {
-        return "saiudoacjsa";
+        return "P4$5W0rD!!@";
       });
   var match$1 = React.useState(function () {
         return false;
       });
+  var setUpperCase = match$1[1];
+  var upperCase = match$1[0];
   var match$2 = React.useState(function () {
         return false;
       });
+  var setLowerCase = match$2[1];
+  var lowerCase = match$2[0];
   var match$3 = React.useState(function () {
         return false;
       });
+  var setNumberCheck = match$3[1];
+  var numberCheck = match$3[0];
   var match$4 = React.useState(function () {
         return false;
       });
+  var setSymbolCheck = match$4[1];
+  var symbolCheck = match$4[0];
   var match$5 = React.useState(function () {
-        return "8";
+        return 8;
       });
   var setPasswordLength = match$5[1];
   var passwordLength = match$5[0];
+  var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowerCaseLetters = upperCaseLetters.toLowerCase();
   var onLengthChange = function (evt) {
     evt.preventDefault();
     var value = evt.target.value;
     setPasswordLength(function (_prev) {
           return value;
         });
+  };
+  var generatePassword = function (_evt) {
+    var characterList = "";
+    if (upperCase) {
+      characterList = upperCaseLetters;
+    }
+    if (lowerCase) {
+      characterList = lowerCaseLetters;
+    }
+    if (numberCheck) {
+      characterList = "0123456789";
+    }
+    if (!symbolCheck) {
+      return ;
+    }
+    characterList = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
   };
   return JsxRuntime.jsx("div", {
               children: JsxRuntime.jsx("div", {
@@ -84,7 +110,7 @@ function App(props) {
                                                                       className: "text-mainlight text-xl font-thin"
                                                                     }),
                                                                 JsxRuntime.jsx("h2", {
-                                                                      children: passwordLength,
+                                                                      children: String(passwordLength),
                                                                       className: "flex items-center text-maingreen text-2xl"
                                                                     })
                                                               ],
@@ -97,7 +123,7 @@ function App(props) {
                                                                     max: "36",
                                                                     min: "8",
                                                                     type: "range",
-                                                                    value: passwordLength,
+                                                                    value: String(passwordLength),
                                                                     onChange: onLengthChange
                                                                   }),
                                                               className: "flex"
@@ -110,9 +136,14 @@ function App(props) {
                                                         JsxRuntime.jsxs("div", {
                                                               children: [
                                                                 JsxRuntime.jsx("input", {
-                                                                      className: "h-6 w-6 bg-subdark border-sublight border-solid border-box border-[3px]",
-                                                                      checked: match$1[0],
-                                                                      type: "checkbox"
+                                                                      className: "h-5 w-5 bg-subdark border-sublight border-solid border-box border-[3px]",
+                                                                      checked: upperCase,
+                                                                      type: "checkbox",
+                                                                      onChange: (function (param) {
+                                                                          setUpperCase(function (prev) {
+                                                                                return !prev;
+                                                                              });
+                                                                        })
                                                                     }),
                                                                 JsxRuntime.jsx("p", {
                                                                       children: "Include Uppercase Letters",
@@ -124,9 +155,14 @@ function App(props) {
                                                         JsxRuntime.jsxs("div", {
                                                               children: [
                                                                 JsxRuntime.jsx("input", {
-                                                                      className: "h-6 w-6 bg-subdark border-sublight border-solid border-box border-[3px]",
-                                                                      checked: match$2[0],
-                                                                      type: "checkbox"
+                                                                      className: "h-5 w-5 bg-subdark border-sublight border-solid border-box border-[3px]",
+                                                                      checked: lowerCase,
+                                                                      type: "checkbox",
+                                                                      onChange: (function (param) {
+                                                                          setLowerCase(function (prev) {
+                                                                                return !prev;
+                                                                              });
+                                                                        })
                                                                     }),
                                                                 JsxRuntime.jsx("p", {
                                                                       children: "Include Lowercase Letters",
@@ -138,9 +174,14 @@ function App(props) {
                                                         JsxRuntime.jsxs("div", {
                                                               children: [
                                                                 JsxRuntime.jsx("input", {
-                                                                      className: "h-6 w-6 bg-subdark border-sublight border-solid border-box border-[3px]",
-                                                                      checked: match$3[0],
-                                                                      type: "checkbox"
+                                                                      className: "h-5 w-5 bg-subdark border-sublight border-solid border-box border-[3px]",
+                                                                      checked: numberCheck,
+                                                                      type: "checkbox",
+                                                                      onChange: (function (param) {
+                                                                          setNumberCheck(function (prev) {
+                                                                                return !prev;
+                                                                              });
+                                                                        })
                                                                     }),
                                                                 JsxRuntime.jsx("p", {
                                                                       children: "Include Numbers",
@@ -152,9 +193,14 @@ function App(props) {
                                                         JsxRuntime.jsxs("div", {
                                                               children: [
                                                                 JsxRuntime.jsx("input", {
-                                                                      className: "h-6 w-6 bg-subdark border-sublight border-solid border-box border-[3px]",
-                                                                      checked: match$4[0],
-                                                                      type: "checkbox"
+                                                                      className: "h-5 w-5 bg-subdark border-sublight border-solid border-box border-[3px]",
+                                                                      checked: symbolCheck,
+                                                                      type: "checkbox",
+                                                                      onChange: (function (param) {
+                                                                          setSymbolCheck(function (prev) {
+                                                                                return !prev;
+                                                                              });
+                                                                        })
                                                                     }),
                                                                 JsxRuntime.jsx("p", {
                                                                       children: "Include Symbols",
@@ -209,7 +255,8 @@ function App(props) {
                                                               src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMTAwMDAgMTAwMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxwYXRoIGZpbGw9IiMyMjI4MzEiIGQ9Ik05NjM1IDQ2NTBoLTcwMHYtNzAwaC03MDB2LTcwMGgtNzAwdi03MDBoLTcwMHYtNzAwaC03MDB2MTQwMGg3MDB2NzAwaDcwMHY3MDBIMzY1djcwMGg3MTcwdjcwMGgtNzAwdjcwMGgtNzAwdjE0MDBoNzAwdi03MDBoNzAwdi03MDBoNzAwdi03MDBoNzAwdi03MDBoNzAweiIgb3BhY2l0eT0iMSIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9IiI+PC9wYXRoPjwvZz48L3N2Zz4="
                                                             })
                                                       ],
-                                                      className: "text-maindark w-full justify-center flex items-center bg-maingreen hover:bg-subgreen py-3 text-xl font-thin"
+                                                      className: "text-maindark w-full justify-center flex items-center bg-maingreen hover:bg-subgreen py-3 text-xl font-thin",
+                                                      onClick: generatePassword
                                                     })
                                               ],
                                               className: "flex flex-col justify-between m-4"
